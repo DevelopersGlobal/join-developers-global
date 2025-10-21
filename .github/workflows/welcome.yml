@@ -1,0 +1,40 @@
+name: Welcome New Members
+
+on:
+  pull_request_target:
+    types: [opened]
+    paths:
+      - 'members/**'
+
+permissions:
+  pull-requests: write
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome Message
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const message = `🎉 Welcome to Developers Global, @${context.payload.pull_request.user.login}!
+            
+            Thank you for joining our community! We're excited to have you here.
+            
+            A maintainer will review your profile shortly. In the meantime, feel free to:
+            - ⭐ Star this repository
+            - 🔍 Explore other members' profiles
+            - 💬 Join our discussions
+            - 🤝 Connect with other developers
+            
+            Looking forward to seeing your contributions to the community! 🚀
+            
+            ---
+            *This is an automated message. If you have any questions, please don't hesitate to ask!*`;
+            
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: message
+            });
