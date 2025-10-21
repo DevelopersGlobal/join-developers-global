@@ -1,0 +1,45 @@
+name: Welcome New Members
+
+on:
+  pull_request:
+    types: [opened]
+    paths:
+      - 'members/*.md'
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome Message
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const message = `
+            ## Welcome to Developers Global! 🌍🎉
+            
+            Thank you **@${context.payload.pull_request.user.login}** for joining our global community of developers!
+            
+            ### What happens next?
+            
+            1. A maintainer will review your profile
+            2. Once approved, your profile will be merged and you'll officially be part of the community
+            3. Your profile will appear in our members list
+            
+            ### While you wait:
+            
+            - ⭐ Star this repository to show your support
+            - 👀 Check out other member profiles for inspiration
+            - 📢 Share Developers Global with your network
+            - 💬 Feel free to engage with other community members
+            
+            We're thrilled to have you here! If you have any questions, don't hesitate to ask.
+            
+            Happy coding! 💻✨
+            `;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: message
+            });
