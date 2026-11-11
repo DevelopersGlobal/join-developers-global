@@ -37,15 +37,11 @@ Joining Developers Global means your profile is listed in the members list. It d
 
 ## Contributing to other DevelopersGlobal projects
 
-You do not need to be listed to contribute. Pick a repository in the [organization](https://github.com/DevelopersGlobal), read its README, look for issues labeled `good first issue` or `help wanted`, and open a pull request from your fork.
+You do not need to be listed to contribute. Pick a repository in the [organization](https://github.com/DevelopersGlobal), read its README, look for an open issue you can help with, and open a pull request from your fork.
 
 ## Becoming a maintainer
 
-Maintainer access is by invitation from the current maintainers, for people who have contributed regularly and reviewed others' work. It is granted per repository and with the least access needed. Maintainers are expected to have two-factor authentication enabled on GitHub.
-
-## Reporting a security problem
-
-If you find a vulnerability or something suspicious (for example an unexpected change to a workflow file), do not post it in a public issue. Contact the maintainers privately through the repository's Security tab, "Report a vulnerability", if available, or ask in an issue for a private channel without sharing details.
+Proposed approach: maintainer access is by invitation from the current maintainers, for people who have contributed regularly and reviewed others' work, granted per repository with the least access needed. Maintainers would be expected to enable two-factor authentication on GitHub. This is a proposal, not an existing policy, and is subject to the organization owner's decision.
 
 ## Code of Conduct
 
