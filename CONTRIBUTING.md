@@ -31,6 +31,18 @@ Thank you for your interest in contributing to Developers Global! We welcome dev
 4. Wait for a maintainer to review your submission
 5. Address any requested changes promptly
 
+## What joining means
+
+Joining Developers Global means your profile is listed in the members list. It does not give you write access to this repository or the DevelopersGlobal organization. Everyone contributes the same way: fork, change, open a pull request. A maintainer reviews and merges.
+
+## Contributing to other DevelopersGlobal projects
+
+You do not need to be listed to contribute. Pick a repository in the [organization](https://github.com/DevelopersGlobal), read its README, look for an open issue you can help with, and open a pull request from your fork.
+
+## Becoming a maintainer
+
+Proposed approach: maintainer access is by invitation from the current maintainers, for people who have contributed regularly and reviewed others' work, granted per repository with the least access needed. Maintainers would be expected to enable two-factor authentication on GitHub. This is a proposal, not an existing policy, and is subject to the organization owner's decision.
+
 ## Code of Conduct
 
 Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md) to ensure a welcoming and inclusive environment for everyone.
