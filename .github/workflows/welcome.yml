@@ -1,10 +1,15 @@
 name: Welcome New Members
 
 on:
-  pull_request:
+  # pull_request_target runs with a token that can comment on PRs from forks.
+  # This workflow never checks out or runs code from the PR.
+  pull_request_target:
     types: [opened]
     paths:
       - 'members/*.md'
+
+permissions:
+  pull-requests: write
 
 jobs:
   welcome:
